@@ -134,9 +134,9 @@ Download_aria2(){
 }
 Download_aria2_conf(){
 	mkdir -p "${file}" && cd "${file}"
-	wget -N "https://raw.githubusercontent.com/P3TERX/aria2_perfect_config/master/aria2.conf"
+	wget -N "https://raw.githubusercontent.com/qt1280/aria2_perfect_config/master/aria2.conf"
 	[[ ! -s "aria2.conf" ]] && echo -e "${Error} Aria2 配置文件下载失败 !" && rm -rf "${file}" && exit 1
-	wget -N "https://raw.githubusercontent.com/P3TERX/aria2_perfect_config/master/autoupload.sh"
+	wget -N "https://raw.githubusercontent.com/qt1280/aria2_perfect_config/master/autoupload.sh"
 	[[ ! -s "autoupload.sh" ]] && echo -e "${Error} 附加功能脚本[autoupload.sh]下载失败 !" && rm -rf "${file}" && exit 1
 	wget -N "https://raw.githubusercontent.com/P3TERX/aria2_perfect_config/master/delete.aria2.sh"
 	[[ ! -s "delete.aria2.sh" ]] && echo -e "${Error} 附加功能脚本[delete.aria2.sh]下载失败 !" && rm -rf "${file}" && exit 1
